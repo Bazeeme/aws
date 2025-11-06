@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Jenkins Pipeline - Download</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; max-width:900px; margin:40px auto; padding:0 20px; }
+    pre { background:#f6f8fa; padding:16px; border-radius:8px; overflow:auto; white-space:pre-wrap; }
+    .card { border:1px solid #e1e4e8; border-radius:8px; padding:20px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+    .btn { display:inline-block; padding:10px 14px; margin-right:10px; text-decoration:none; border-radius:6px; border:1px solid #0366d6; color:#0366d6; }
+  </style>
+</head>
+<body>
+  <h1>Jenkins Pipeline (Jenkinsfile)</h1>
+  <div class="card">
+    <p>This page contains the Jenkins Pipeline you asked for. You can view the Jenkinsfile below and download it using the button.</p>
+
+    <h2>Pipeline code</h2>
+    <pre>pipeline {
+    agent any
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main',
+                    credentialsId: 'Github',
+                    url: 'https://github.com/Bazeeme/aws.git'
+            }
+        }
+
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+</pre>
+
+    <p>
+      <a class="btn" href="Jenkinsfile" download="Jenkinsfile">Download Jenkinsfile</a>
+      <a class="btn" href="https://github.com/Bazeeme/aws.git" target="_blank" rel="noopener">Open GitHub repo</a>
+    </p>
+  </div>
+
+  <footer style="margin-top:30px; color:#6b7280;">Generated for you — save the files or copy the code into your project.</footer>
+</body>
+</html>
